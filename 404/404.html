@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+
+<style>
+    .not-found {
+        color: white;
+        font-family: 'Mulish', sans-serif;
+        min-height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @keyframes flip {
+        0% {
+            transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+            animation-timing-function: ease-out;
+        }
+        10% {
+            transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+            animation-timing-function: ease-out;
+        }
+        30% {
+            transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+            animation-timing-function: ease-in;
+        }
+        40% {
+            transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);
+            animation-timing-function: ease-in;
+        }
+        100% {
+            transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+            animation-timing-function: ease-in;
+        }
+    }
+    
+    .not-found__title {
+        font-size: 80px;
+        font-weight: bold;
+        margin: 0;
+        animation-duration: 2.5s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        backface-visibility: visible;
+        animation-name: flip;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <img src="./assets/img/logo-platzi-video.png" alt="" class="header__img">
+    </header>
+
+    <section class="not-found">
+        <h1 class="not-found__title">404</h1>
+        <p class="not-found__subtitle">Página no encontrada</p>
+    </section>
+
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+
+</html>
